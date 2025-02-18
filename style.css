@@ -24,15 +24,15 @@ svg{
 
 :root{
   /* Light Theme Variables */
-  --color-text-light: #333332;
-  --color-background-light: #EEE5E9;
-  --color-pink-light: #1B998B;
-  --color-green-light: #E8C547;
-  --color-blue-light: #30323D;
+  --color-text-light: #1a1a1a;
+  --color-background-light: #65ceeb;
+  --color-pink-light: #09044e;
+  --color-green-light: #e7cf78;
+  --color-blue-light: #191a1f;
 
   /* Dark Theme Variables */
-  --color-text-dark: #FAF4E5;
-  --color-background-dark: #8395CD;
+  --color-text-dark: #f9f6ed;
+  --color-background-dark: #363e55;
 }
 
 .light-theme{
@@ -173,6 +173,33 @@ svg{
   100%{
     transform: translateY(8px)
   }
+}
+ol { padding-left: 50px; }
+
+li { 
+  color: #4F4F4F; 
+  padding-left: 16px;
+  margin-top: 24px;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  
+  &:before {
+    content: '';
+    display: block;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    position: absolute;
+    top: -6px;
+    left: -33px;
+  }
+}
+
+ol.alternating-colors { 
+  li:nth-child(odd):before { border-color: #090900; }
+  li:nth-child(even):before { border-color: #090900; }
 }
 
 /* Toggle Bar --------------------------------------------- */
